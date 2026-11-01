@@ -52,9 +52,39 @@ input {
 }
 
 .app-shell__header,
-.app-shell__main {
+.app-shell__main,
+.app-shell__footer {
   width: min(1200px, 100%); /* widened max container */
   margin: 0 auto;
+}
+
+.app-shell__footer {
+  padding-top: 24px;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.app-shell__footer a {
+  color: var(--brand-strong);
+  font-weight: 600;
+}
+
+.about-page__content {
+  display: grid;
+  gap: 12px;
+  max-width: 52rem;
+}
+
+.about-page__content h2 {
+  margin: 12px 0 0;
+  color: var(--ink);
+  font-size: 1.25rem;
+}
+
+.about-page__content p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
 }
 
 .app-shell__header {

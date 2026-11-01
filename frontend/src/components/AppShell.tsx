@@ -1,4 +1,5 @@
 import type { PropsWithChildren } from "react";
+import { Link } from "react-router-dom";
 
 export function AppShell({ children }: PropsWithChildren) {
   return (
@@ -13,6 +14,9 @@ export function AppShell({ children }: PropsWithChildren) {
         </div>
       </header>
       <main className="app-shell__main">{children}</main>
+      <footer className="app-shell__footer">
+        <Link to="/about-us">About us</Link>
+      </footer>
     </div>
   );
 }

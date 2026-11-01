@@ -82,6 +82,7 @@ Implemented today:
 - lobby participant display from the latest fetched snapshot
 - game screen placeholders for canvas, guess input, scoreboard, and results
 - basic light UI styling
+- an About Us page at `/about-us`, linked from the app footer
 
 Not implemented yet:
 
