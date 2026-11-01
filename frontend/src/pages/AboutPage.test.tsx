@@ -22,7 +22,11 @@ describe("AboutPage", () => {
 
     flushSync(() => root.render(<AppRoutes />));
 
-    expect(container.querySelector('a[href="/about-us"]')).not.toBeNull();
+    const aboutLink = container.querySelector<HTMLAnchorElement>(
+      'a[href="/about-us"]',
+    );
+    expect(aboutLink).not.toBeNull();
+    expect(aboutLink?.textContent).toBe("About us");
     expect(container.textContent).toContain("About Scribble");
 
     flushSync(() => root.unmount());
