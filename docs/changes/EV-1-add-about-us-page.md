@@ -16,7 +16,7 @@ Added a public About Us page for Scribble at `/about-us` and a persistent footer
 - Linked from the shared footer so the page is discoverable across the app.
 
 ## How each criterion is met
-- **Add about-us page:** `/about-us` renders `AboutPage`, and the shared footer links to it. `AboutPage` tests the page heading and game explanation; `serves the page at /about-us and exposes a footer link to it` verifies both route rendering and navigation link.
+- **Add about-us page:** `/about-us` renders `AboutPage`, which explains Scribble and how to play. The `renders the about-us page with an explanation of Scribble` test checks the content. The `serves the page at /about-us and exposes a footer link to it` test checks that the route renders the page and that the shared footer exposes the route link.
 
 ## How to verify
 1. Run `cd frontend && npm run dev`.
@@ -24,13 +24,13 @@ Added a public About Us page for Scribble at `/about-us` and a persistent footer
 3. Run `cd frontend && npm test` and `cd frontend && npm run build`.
 
 ## Tests
-- `cd frontend && npm test` — **passed** (2 files, 4 tests), including the About Us content test and `serves the page at /about-us and exposes a footer link to it` route/navigation test.
-- `cd frontend && npm run build` — **passed** (TypeScript project build/typecheck and Vite production build).
-- `npm test` from the repository root — not applicable because there is no root `package.json`; reran tests successfully from each package directory.
-- `cd backend && npm test` — **passed** (2 files, 4 tests; unrelated regression check).
+- `cd frontend && npm test` — **passed** (2 files, 4 tests). The About Us tests `renders the about-us page with an explanation of Scribble` and `serves the page at /about-us and exposes a footer link to it` both passed; the existing API tests also passed.
+- `cd frontend && npm run build` — **passed**; runs `tsc -b` (TypeScript typecheck) and the Vite production build.
+- `cd backend && npm test` — **passed** (2 files, 4 tests; regression check).
 - `cd backend && npm run build` — **passed**.
-- Lint was checked via `npm run` in each package; neither package defines a lint script, so lint cannot be run.
+- Lint — checked available scripts using `npm run` in both packages; neither package defines a lint script, so no lint command is available.
 - `git diff --check` — **passed**.
+- Root-level `npm test`/`npm run build` — **not applicable**: these commands were attempted but failed because the repository has no root `package.json`; the package-level commands above were used instead.
 
 ## Docs updated
 - `README.md`: documents the About Us route and adds it to the quick verification flow.
