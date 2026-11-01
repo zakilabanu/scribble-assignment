@@ -16,7 +16,7 @@ Added a public About Us page for Scribble at `/about-us` and a persistent footer
 - Linked from the shared footer so the page is discoverable across the app.
 
 ## How each criterion is met
-- **Add about-us page:** `/about-us` renders `AboutPage`; the `AboutPage` test checks the page heading and informational content.
+- **Add about-us page:** `/about-us` renders `AboutPage`, and the shared footer links to it. `AboutPage` tests the page heading and game explanation; `serves the page at /about-us and exposes a footer link to it` verifies both route rendering and navigation link.
 
 ## How to verify
 1. Run `cd frontend && npm run dev`.
@@ -24,16 +24,16 @@ Added a public About Us page for Scribble at `/about-us` and a persistent footer
 3. Run `cd frontend && npm test` and `cd frontend && npm run build`.
 
 ## Tests
-- Added `AboutPage` test: verifies rendered About Scribble title, descriptive heading, and game explanation — **passed**.
-- `cd frontend && npm test` — **passed** (2 files, 3 tests).
-- `cd frontend && npm run build` — **passed** (includes TypeScript project build/typecheck and Vite production build).
-- `cd backend && npm test` — **passed** (2 files, 4 tests).
+- `cd frontend && npm test` — **passed** (2 files, 4 tests), including the About Us content test and `serves the page at /about-us and exposes a footer link to it` route/navigation test.
+- `cd frontend && npm run build` — **passed** (TypeScript project build/typecheck and Vite production build).
+- `npm test` from the repository root — not applicable because there is no root `package.json`; reran tests successfully from each package directory.
+- `cd backend && npm test` — **passed** (2 files, 4 tests; unrelated regression check).
 - `cd backend && npm run build` — **passed**.
+- Lint was checked via `npm run` in each package; neither package defines a lint script, so lint cannot be run.
 - `git diff --check` — **passed**.
-- Lint was not run: neither frontend nor backend defines a lint script.
 
 ## Docs updated
-- `README.md`: lists the About Us route.
+- `README.md`: documents the About Us route and adds it to the quick verification flow.
 - `docs/changes/EV-1-add-about-us-page.md`: this change note.
 
 ## Open questions
