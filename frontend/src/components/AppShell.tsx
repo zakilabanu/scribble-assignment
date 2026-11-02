@@ -15,6 +15,7 @@ export function AppShell({ children }: PropsWithChildren) {
       </header>
       <main className="app-shell__main">{children}</main>
       <footer className="app-shell__footer">
+        <span>© {new Date().getFullYear()} Scribble</span>
         <Link to="/about-us">About us</Link>
         <Link to="/terms-and-conditions">Terms and conditions</Link>
       </footer>

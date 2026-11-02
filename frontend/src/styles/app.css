@@ -59,6 +59,10 @@ input {
 }
 
 .app-shell__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
   padding-top: 24px;
   color: var(--ink-soft);
   font-size: 0.9rem;

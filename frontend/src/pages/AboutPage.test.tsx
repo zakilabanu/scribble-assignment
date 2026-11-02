@@ -33,6 +33,9 @@ describe("AboutPage", () => {
       'footer a[href="/terms-and-conditions"]',
     );
     expect(termsLink?.textContent).toBe("Terms and conditions");
+    expect(container.querySelector("footer")?.textContent).toContain(
+      `© ${new Date().getFullYear()} Scribble`,
+    );
 
     flushSync(() => root.unmount());
   });
