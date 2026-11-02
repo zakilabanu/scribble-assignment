@@ -15,7 +15,7 @@ describe("AboutPage", () => {
     expect(markup).toContain("Create a room");
   });
 
-  it("serves the page at /about-us and exposes a footer link to it", () => {
+  it("serves the page at /about-us and exposes footer links", () => {
     window.history.replaceState({}, "", "/about-us");
     const container = document.createElement("div");
     const root = createRoot(container);
@@ -28,6 +28,11 @@ describe("AboutPage", () => {
     expect(aboutLink).not.toBeNull();
     expect(aboutLink?.textContent).toBe("About us");
     expect(container.textContent).toContain("About Scribble");
+
+    const termsLink = container.querySelector<HTMLAnchorElement>(
+      'footer a[href="/terms-and-conditions"]',
+    );
+    expect(termsLink?.textContent).toBe("Terms and conditions");
 
     flushSync(() => root.unmount());
   });
