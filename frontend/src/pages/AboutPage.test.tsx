@@ -39,7 +39,7 @@ describe("AboutPage", () => {
     );
     expect(galleryLink?.textContent?.trim()).toBe("Everest gallery");
     expect(galleryLink?.target).toBe("_blank");
-    expect(galleryLink?.rel).toBe("noreferrer");
+    expect(galleryLink?.rel).toBe("noopener noreferrer");
 
     flushSync(() => root.unmount());
   });
