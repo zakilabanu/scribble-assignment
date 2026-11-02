@@ -17,6 +17,9 @@ export function AppShell({ children }: PropsWithChildren) {
       <footer className="app-shell__footer">
         <Link to="/about-us">About us</Link>
         <Link to="/terms-and-conditions">Terms and conditions</Link>
+        <a href="https://everest.gallery" target="_blank" rel="noreferrer">
+          Everest gallery
+        </a>
       </footer>
     </div>
   );

@@ -34,6 +34,13 @@ describe("AboutPage", () => {
     );
     expect(termsLink?.textContent).toBe("Terms and conditions");
 
+    const galleryLink = container.querySelector<HTMLAnchorElement>(
+      'footer a[href="https://everest.gallery"]',
+    );
+    expect(galleryLink?.textContent?.trim()).toBe("Everest gallery");
+    expect(galleryLink?.target).toBe("_blank");
+    expect(galleryLink?.rel).toBe("noreferrer");
+
     flushSync(() => root.unmount());
   });
 });
