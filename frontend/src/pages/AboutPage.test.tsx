@@ -15,7 +15,7 @@ describe("AboutPage", () => {
     expect(markup).toContain("Create a room");
   });
 
-  it("serves the page at /about-us and exposes a footer link to it", () => {
+  it("serves the page and exposes About us and Reviews footer links", () => {
     window.history.replaceState({}, "", "/about-us");
     const container = document.createElement("div");
     const root = createRoot(container);
@@ -27,6 +27,11 @@ describe("AboutPage", () => {
     );
     expect(aboutLink).not.toBeNull();
     expect(aboutLink?.textContent).toBe("About us");
+    const reviewsLink = container.querySelector<HTMLAnchorElement>(
+      'a[href="/about-us#reviews"]',
+    );
+    expect(reviewsLink).not.toBeNull();
+    expect(reviewsLink?.textContent).toBe("Reviews");
     expect(container.textContent).toContain("About Scribble");
 
     flushSync(() => root.unmount());
