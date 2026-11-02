@@ -13,6 +13,14 @@ export function AppShell({ children }: PropsWithChildren) {
           </p>
         </div>
       </header>
+      <aside className="app-banner" aria-label="Play Scribble">
+        <span className="app-banner__message">
+          Ready to play? Gather your friends for a drawing game.
+        </span>
+        <Link className="app-banner__link" to="/create-room">
+          Create a room
+        </Link>
+      </aside>
       <main className="app-shell__main">{children}</main>
       <footer className="app-shell__footer">
         <Link to="/about-us">About us</Link>

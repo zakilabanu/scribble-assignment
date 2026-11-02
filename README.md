@@ -84,6 +84,7 @@ Implemented today:
 - basic light UI styling
 - an About Us page at `/about-us`, linked from the app footer
 - a “Terms and conditions” footer link to `/terms-and-conditions`, with sample placeholder terms content
+- a site-wide play banner inviting visitors to create a room
 
 Not implemented yet:
 
