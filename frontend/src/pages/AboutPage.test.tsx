@@ -34,6 +34,16 @@ describe("AboutPage", () => {
     );
     expect(termsLink?.textContent).toBe("Terms and conditions");
 
+    const everestLink = container.querySelector<HTMLAnchorElement>(
+      'footer a[href="https://www.everest.engineering/"]',
+    );
+    expect(everestLink?.textContent?.trim()).toBe("Everest website");
+    expect(everestLink?.previousSibling?.textContent).toBe(
+      "contact everest for more details ",
+    );
+    expect(everestLink?.target).toBe("_blank");
+    expect(everestLink?.rel).toBe("noopener noreferrer");
+
     flushSync(() => root.unmount());
   });
 });
