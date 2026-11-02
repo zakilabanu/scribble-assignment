@@ -23,13 +23,13 @@ Add Everest contact prompt to the footer
 3. Run frontend tests and build with `cd frontend && npm test && npm run build`.
 
 ## Tests
-- `cd frontend && npm test` — passed: 3 test files, 6 tests, including the footer regression assertion.
+- `cd frontend && npm test` — passed: 3 test files and 6 tests, including the footer regression assertion. React Router emitted existing future-flag warnings.
 - `cd frontend && npm run build` — passed: TypeScript project build/typecheck and Vite production build.
-- `cd backend && npm test` — passed: 2 test files, 4 tests (regression suite).
+- `cd backend && npm test` — passed: 2 test files and 4 tests.
 - `cd backend && npm run build` — passed.
-- Lint — not run; neither frontend nor backend defines a lint script.
+- Lint — not available; neither frontend nor backend defines a lint script.
 - `git diff --check` — passed.
-- An initial test/build invocation from repository root failed because there is no root `package.json`; commands were rerun from the respective application directories and passed.
+- An initial test/build invocation from the repository root failed because no root `package.json` exists; rerunning both suites from their respective application directories succeeded.
 
 ## Docs updated
 - `README.md` — verification instructions now specify the final footer wording.
