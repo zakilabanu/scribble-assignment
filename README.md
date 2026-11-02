@@ -139,7 +139,7 @@ Use this to confirm the starter works from a clean clone:
 
 1. Start the backend and confirm `http://localhost:3001/health` returns `{ "ok": true }`.
 2. Start the frontend and open `http://localhost:5173`.
-3. Confirm the Start screen shows `Create Room` and `Join Room`, then use the footer’s “About us” link (or visit `http://localhost:5173/about-us`) to open the information page. Use “Terms and conditions” (or visit `http://localhost:5173/terms-and-conditions`) to open the page with sample placeholder terms. Confirm the footer says “check everest services” immediately before the “Everest website” link, which opens https://www.everest.engineering/ in a new tab.
+3. Confirm the Start screen shows `Create Room` and `Join Room`, then use the footer’s “About us” link (or visit `http://localhost:5173/about-us`) to open the information page. Use “Terms and conditions” (or visit `http://localhost:5173/terms-and-conditions`) to open the page with sample placeholder terms. Confirm the footer says “contact everest for more details” immediately before the “Everest website” link, which opens https://www.everest.engineering/ in a new tab.
 4. Create a room and confirm you land on the Lobby screen.
 5. Open another tab, join the same room, and use the Lobby refresh button to load the latest participant list.
 6. Open the Game screen and confirm the canvas, guess input, scoreboard, and result areas are placeholders only.

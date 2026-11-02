@@ -39,7 +39,7 @@ describe("AboutPage", () => {
     );
     expect(everestLink?.textContent?.trim()).toBe("Everest website");
     expect(everestLink?.previousSibling?.textContent).toBe(
-      "check everest services ",
+      "contact everest for more details ",
     );
     expect(everestLink?.target).toBe("_blank");
     expect(everestLink?.rel).toBe("noopener noreferrer");
