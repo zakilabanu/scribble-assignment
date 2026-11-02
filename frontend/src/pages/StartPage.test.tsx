@@ -12,7 +12,7 @@ describe("StartPage", () => {
     flushSync(() => root.render(<AppRoutes />));
 
     expect(container.querySelector("h1")?.textContent).toBe(
-      "Scribble: Draw & Guess",
+      "Hello world",
     );
 
     flushSync(() => root.unmount());
