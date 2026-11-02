@@ -15,7 +15,7 @@ describe("AboutPage", () => {
     expect(markup).toContain("Create a room");
   });
 
-  it("serves the page and exposes About us and Reviews footer links", () => {
+  it("exposes About us and Reviews footer links", () => {
     window.history.replaceState({}, "", "/about-us");
     const container = document.createElement("div");
     const root = createRoot(container);
@@ -28,11 +28,24 @@ describe("AboutPage", () => {
     expect(aboutLink).not.toBeNull();
     expect(aboutLink?.textContent).toBe("About us");
     const reviewsLink = container.querySelector<HTMLAnchorElement>(
-      'a[href="/about-us#reviews"]',
+      'a[href="/reviews"]',
     );
     expect(reviewsLink).not.toBeNull();
     expect(reviewsLink?.textContent).toBe("Reviews");
     expect(container.textContent).toContain("About Scribble");
+
+    flushSync(() => root.unmount());
+  });
+
+  it("serves the Reviews page at /reviews", () => {
+    window.history.replaceState({}, "", "/reviews");
+    const container = document.createElement("div");
+    const root = createRoot(container);
+
+    flushSync(() => root.render(<AppRoutes />));
+
+    expect(container.textContent).toContain("Player reviews");
+    expect(container.textContent).toContain("No player reviews are available yet.");
 
     flushSync(() => root.unmount());
   });

@@ -6,6 +6,7 @@ import { GamePage } from "../pages/GamePage";
 import { JoinRoomPage } from "../pages/JoinRoomPage";
 import { LobbyPage } from "../pages/LobbyPage";
 import { StartPage } from "../pages/StartPage";
+import { ReviewsPage } from "../pages/ReviewsPage";
 
 export function AppRoutes() {
   return (
@@ -14,6 +15,7 @@ export function AppRoutes() {
         <Routes>
           <Route path="/" element={<StartPage />} />
           <Route path="/about-us" element={<AboutPage />} />
+          <Route path="/reviews" element={<ReviewsPage />} />
           <Route path="/create-room" element={<CreateRoomPage />} />
           <Route path="/join-room" element={<JoinRoomPage />} />
           <Route path="/lobby" element={<LobbyPage />} />

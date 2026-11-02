@@ -16,7 +16,7 @@ export function AppShell({ children }: PropsWithChildren) {
       <main className="app-shell__main">{children}</main>
       <footer className="app-shell__footer">
         <Link to="/about-us">About us</Link>
-        <Link to="#reviews">Reviews</Link>
+        <Link to="/reviews">Reviews</Link>
       </footer>
     </div>
   );
