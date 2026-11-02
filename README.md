@@ -81,7 +81,7 @@ Implemented today:
 - in-memory room storage on the backend
 - lobby participant display from the latest fetched snapshot
 - game screen placeholders for canvas, guess input, scoreboard, and results
-- basic light UI styling
+- basic light UI styling, including a subtle repeating Scribble doodle background image
 - an About Us page at `/about-us`, linked from the app footer
 - a “Terms and conditions” footer link to `/terms-and-conditions`, with sample placeholder terms content
 

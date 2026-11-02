@@ -28,6 +28,10 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #f3f4f6;
+  background-image: url("/scribble-background.svg");
+  background-repeat: repeat;
+  background-size: 320px 320px;
 }
 
 a {
