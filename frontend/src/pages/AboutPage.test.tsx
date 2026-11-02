@@ -29,6 +29,12 @@ describe("AboutPage", () => {
     expect(aboutLink?.textContent).toBe("About us");
     expect(container.textContent).toContain("About Scribble");
 
+    const termsText = Array.from(container.querySelectorAll("footer span")).find(
+      (element) => element.textContent === "Terms and conditions",
+    );
+    expect(termsText).not.toBeUndefined();
+    expect(termsText?.closest("a")).toBeNull();
+
     flushSync(() => root.unmount());
   });
 });
