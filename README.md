@@ -84,6 +84,7 @@ Implemented today:
 - basic light UI styling
 - an About Us page at `/about-us`, linked from the app footer
 - a “Terms and conditions” footer link to `/terms-and-conditions`, with sample placeholder terms content
+- a “Contact us” footer link to the repository's GitHub issue form
 
 Not implemented yet:
 
@@ -138,7 +139,7 @@ Use this to confirm the starter works from a clean clone:
 
 1. Start the backend and confirm `http://localhost:3001/health` returns `{ "ok": true }`.
 2. Start the frontend and open `http://localhost:5173`.
-3. Confirm the Start screen shows `Create Room` and `Join Room`, then use the footer’s “About us” link (or visit `http://localhost:5173/about-us`) to open the information page. Use “Terms and conditions” (or visit `http://localhost:5173/terms-and-conditions`) to open the page with sample placeholder terms.
+3. Confirm the Start screen shows `Create Room` and `Join Room`, then use the footer’s “About us” link (or visit `http://localhost:5173/about-us`) to open the information page. Use “Terms and conditions” (or visit `http://localhost:5173/terms-and-conditions`) to open the page with sample placeholder terms. “Contact us” opens the repository's GitHub issue form in a new tab.
 4. Create a room and confirm you land on the Lobby screen.
 5. Open another tab, join the same room, and use the Lobby refresh button to load the latest participant list.
 6. Open the Game screen and confirm the canvas, guess input, scoreboard, and result areas are placeholders only.

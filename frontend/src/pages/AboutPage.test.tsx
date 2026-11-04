@@ -34,6 +34,13 @@ describe("AboutPage", () => {
     );
     expect(termsLink?.textContent).toBe("Terms and conditions");
 
+    const contactLink = container.querySelector<HTMLAnchorElement>(
+      'footer a[href="https://github.com/zakilabanu/scribble-assignment/issues/new"]',
+    );
+    expect(contactLink?.textContent).toBe("Contact us");
+    expect(contactLink?.target).toBe("_blank");
+    expect(contactLink?.rel).toContain("noreferrer");
+
     flushSync(() => root.unmount());
   });
 });
