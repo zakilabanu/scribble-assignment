@@ -17,6 +17,13 @@ export function AppShell({ children }: PropsWithChildren) {
       <footer className="app-shell__footer">
         <Link to="/about-us">About us</Link>
         <Link to="/terms-and-conditions">Terms and conditions</Link>
+        <a
+          href="https://github.com/zakilabanu/scribble-assignment/issues/new"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Contact us
+        </a>
       </footer>
     </div>
   );
