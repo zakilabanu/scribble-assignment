@@ -17,6 +17,7 @@ export function AppShell({ children }: PropsWithChildren) {
       <footer className="app-shell__footer">
         <Link to="/about-us">About us</Link>
         <Link to="/terms-and-conditions">Terms and conditions</Link>
+        <Link to="/privacy-policy">Privacy policy</Link>
       </footer>
     </div>
   );

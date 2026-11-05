@@ -34,6 +34,11 @@ describe("AboutPage", () => {
     );
     expect(termsLink?.textContent).toBe("Terms and conditions");
 
+    const privacyLink = container.querySelector<HTMLAnchorElement>(
+      'footer a[href="/privacy-policy"]',
+    );
+    expect(privacyLink?.textContent).toBe("Privacy policy");
+
     flushSync(() => root.unmount());
   });
 });
