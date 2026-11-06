@@ -26,7 +26,7 @@ describe("AboutPage", () => {
       'a[href="/about-us"]',
     );
     expect(aboutLink).not.toBeNull();
-    expect(aboutLink?.textContent).toBe("About us");
+    expect(aboutLink?.textContent).toBe("About Scribble");
     expect(container.textContent).toContain("About Scribble");
 
     const termsLink = container.querySelector<HTMLAnchorElement>(
