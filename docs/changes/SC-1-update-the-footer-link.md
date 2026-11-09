@@ -27,11 +27,11 @@ Set a descriptive browser-tab title
 3. Confirm **About Scribble** still opens `/about-us`. To check the fallback, block the SVG in the browser's network tools when running the dev server and reload; the light background should remain.
 
 ## Tests
-- Added `frontend/src/index.test.ts` to assert the chosen browser-tab title. The earlier `frontend/src/styles/app.test.ts` checks the background asset, CSS and fallback.
-- `cd frontend && npm test` — passed: 5 files, 8 tests.
-- `cd frontend && npm run build` — passed (TypeScript and Vite).
-- `cd backend && npm test` — passed: 2 files, 4 tests.
-- `cd backend && npm run build` — passed (TypeScript).
+- `frontend/src/index.test.ts` asserts the selected browser-tab title; `frontend/src/styles/app.test.ts` continues to check the background asset, CSS and fallback.
+- Re-ran `cd frontend && npm test` — passed: 5 files, 8 tests.
+- Re-ran `cd frontend && npm run build` — passed (TypeScript and Vite).
+- Re-ran `cd backend && npm test` — passed: 2 files, 4 tests.
+- Re-ran `cd backend && npm run build` — passed (TypeScript).
 - Lint — unavailable; neither package defines a lint script. TypeScript checks passed as part of both builds.
 - Visual browser verification has not been performed.
 
