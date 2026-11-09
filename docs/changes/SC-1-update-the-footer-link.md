@@ -20,13 +20,13 @@ Set a descriptive browser-tab title
 2. Run `cd frontend && npm run dev` and confirm the browser tab displays `Scribble — Draw and Guess`.
 
 ## Tests
-- `frontend/src/index.test.ts` covers the title criterion by asserting the exact document title.
+- The existing `frontend/src/index.test.ts` test, `uses a descriptive title for the browser tab`, asserts the exact document title; no additional test was needed for this already-implemented title change.
 - `cd frontend && npm test` — passed: 5 files, 8 tests.
-- `cd frontend && npm run build` — passed: TypeScript and Vite production build.
+- `cd frontend && npm run build` — passed: TypeScript typecheck and Vite production build.
 - `cd backend && npm test` — passed: 2 files, 4 tests.
 - `cd backend && npm run build` — passed: TypeScript build.
-- `npm run lint` in both `frontend` and `backend` — unavailable; neither package defines a lint script.
-- A combined test/build command run from the repository root failed because there is no root `package.json`; rerunning from each package directory succeeded.
+- Lint — not available; neither the frontend nor backend package defines a lint script.
+- Running npm commands from the repository root fails because there is no root `package.json`; running from each package directory succeeded.
 - Visual browser verification has not been performed.
 
 ## Docs updated
