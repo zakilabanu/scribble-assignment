@@ -12,6 +12,11 @@ export function AppShell({ children }: PropsWithChildren) {
             A real-time multiplayer drawing and guessing game.
           </p>
         </div>
+        <nav className="app-shell__nav" aria-label="Main navigation">
+          <Link to="/">Home</Link>
+          <Link to="/about-us">About</Link>
+          <Link to="/terms-and-conditions">Terms</Link>
+        </nav>
       </header>
       <main className="app-shell__main">{children}</main>
       <footer className="app-shell__footer">
