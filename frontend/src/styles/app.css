@@ -98,6 +98,27 @@ input {
   margin-bottom: 40px;
 }
 
+.app-shell__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.app-shell__nav a {
+  padding: 4px 0;
+  color: var(--brand-strong);
+  font-weight: 600;
+}
+
+.app-shell__nav a:hover {
+  text-decoration: underline;
+}
+
+.app-shell__nav a:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
 .app-shell__eyebrow,
 .section-kicker {
   margin: 0 0 8px;
