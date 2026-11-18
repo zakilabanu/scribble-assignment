@@ -2,6 +2,27 @@ import { describe, expect, it } from "vitest";
 import background from "../assets/scribble-background.svg?raw";
 import styles from "./app.css?raw";
 
+describe("app footer", () => {
+  it("spaces and wraps footer links", () => {
+    const style = document.createElement("style");
+    style.textContent = styles;
+    document.head.appendChild(style);
+
+    try {
+      const footerRules = Array.from(style.sheet!.cssRules).filter(
+        (rule): rule is CSSStyleRule => rule.type === CSSRule.STYLE_RULE && (rule as CSSStyleRule).selectorText === ".app-shell__footer",
+      );
+      expect(footerRules.some((rule) =>
+        rule.style.getPropertyValue("display") === "flex" &&
+        rule.style.getPropertyValue("flex-wrap") === "wrap" &&
+        rule.style.getPropertyValue("gap") === "16px",
+      )).toBe(true);
+    } finally {
+      style.remove();
+    }
+  });
+});
+
 describe("app background", () => {
   it("tiles the local drawing image across the page with a fallback color", () => {
     const style = document.createElement("style");
