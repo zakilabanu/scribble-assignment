@@ -1,6 +1,6 @@
 :root {
   color: #1f2937;
-  background: #f3f4f6; /* slightly darker background to make cards pop */
+  background: #f8f4eb; /* warm paper fallback behind the drawing pattern */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -28,7 +28,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #f3f4f6;
+  background-color: #f8f4eb;
   background-image: url("../assets/scribble-background.svg");
   background-repeat: repeat;
 }
