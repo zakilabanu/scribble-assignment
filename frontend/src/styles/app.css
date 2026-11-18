@@ -29,8 +29,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: #f3f4f6;
-  background-image: url("../assets/scribble-background.svg");
-  background-repeat: repeat;
 }
 
 a {
