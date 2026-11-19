@@ -10,9 +10,18 @@ describe("AboutPage", () => {
     const markup = renderToStaticMarkup(<AboutPage />);
 
     expect(markup).toContain("About Scribble");
-    expect(markup).toContain("Draw, guess, and have fun together");
-    expect(markup).toContain("How it works");
-    expect(markup).toContain("Create a room");
+    expect(markup).toContain("A little imagination, a lot of fun together");
+    expect(markup).toContain(
+      "The idea behind Scribble is simple: bring people together through drawing and guessing.",
+    );
+    expect(markup).toContain("A sketch starts the conversation");
+    expect(markup).toContain(
+      "A word becomes a drawing, and a drawing sparks a guess.",
+    );
+    expect(markup).toContain("Better together");
+    expect(markup).toContain(
+      "Scribble is about the joy of playing together, not perfect pictures.",
+    );
   });
 
   it("serves the page at /about-us and exposes footer links", () => {
@@ -23,11 +32,13 @@ describe("AboutPage", () => {
     flushSync(() => root.render(<AppRoutes />));
 
     const aboutLink = container.querySelector<HTMLAnchorElement>(
-      'a[href="/about-us"]',
+      'footer a[href="/about-us"]',
     );
     expect(aboutLink).not.toBeNull();
     expect(aboutLink?.textContent).toBe("About Scribble");
-    expect(container.textContent).toContain("About Scribble");
+    expect(container.querySelector("h1")?.textContent).toBe(
+      "A little imagination, a lot of fun together",
+    );
 
     const termsLink = container.querySelector<HTMLAnchorElement>(
       'footer a[href="/terms-and-conditions"]',
@@ -35,5 +46,34 @@ describe("AboutPage", () => {
     expect(termsLink?.textContent).toBe("Terms and conditions");
 
     flushSync(() => root.unmount());
+    window.history.replaceState({}, "", "/");
+  });
+
+  it("opens the about-us page from the shared footer", () => {
+    window.history.replaceState({}, "", "/");
+    const container = document.createElement("div");
+    const root = createRoot(container);
+
+    try {
+      flushSync(() => root.render(<AppRoutes />));
+      const aboutLink = container.querySelector<HTMLAnchorElement>(
+        'footer a[href="/about-us"]',
+      );
+      expect(aboutLink).not.toBeNull();
+
+      flushSync(() => {
+        aboutLink?.dispatchEvent(
+          new MouseEvent("click", { bubbles: true, cancelable: true, button: 0 }),
+        );
+      });
+
+      expect(window.location.pathname).toBe("/about-us");
+      expect(container.querySelector("h1")?.textContent).toBe(
+        "A little imagination, a lot of fun together",
+      );
+    } finally {
+      flushSync(() => root.unmount());
+      window.history.replaceState({}, "", "/");
+    }
   });
 });
