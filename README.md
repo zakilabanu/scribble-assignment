@@ -82,6 +82,7 @@ Implemented today:
 - lobby participant display from the latest fetched snapshot
 - game screen placeholders for canvas, guess input, scoreboard, and results
 - light UI styling with a solid light-gray background across the app
+- a shared footer displaying “© 2026 Scribble” on every page
 - an About Us page at `/about-us`, linked from the app footer as “About Scribble”
 - a “Terms and conditions” footer link to `/terms-and-conditions`, with sample placeholder terms content
 

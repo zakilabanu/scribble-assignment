@@ -15,15 +15,17 @@ describe("AboutPage", () => {
     expect(markup).toContain("Create a room");
   });
 
-  it("serves the page at /about-us and exposes footer links", () => {
+  it("serves the page at /about-us with footer copyright and links", () => {
     window.history.replaceState({}, "", "/about-us");
     const container = document.createElement("div");
     const root = createRoot(container);
 
     flushSync(() => root.render(<AppRoutes />));
 
+    expect(container.querySelector("footer p")?.textContent).toBe("© 2026 Scribble");
+
     const aboutLink = container.querySelector<HTMLAnchorElement>(
-      'a[href="/about-us"]',
+      'footer a[href="/about-us"]',
     );
     expect(aboutLink).not.toBeNull();
     expect(aboutLink?.textContent).toBe("About Scribble");
