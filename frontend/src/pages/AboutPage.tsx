@@ -5,23 +5,22 @@ export function AboutPage() {
     <section className="panel placeholder-page about-page">
       <PageHeader
         kicker="About Scribble"
-        title="Draw, guess, and have fun together"
-        description="Scribble is a multiplayer drawing and guessing game where friends take turns bringing words to life and racing to guess what they see."
+        title="A little imagination, a lot of fun together"
+        description="The idea behind Scribble is simple: bring people together through drawing and guessing."
       />
 
       <div className="about-page__content">
-        <h2>How it works</h2>
+        <h2>A sketch starts the conversation</h2>
         <p>
-          Create a room and invite others to join with its room code. Players
-          take turns drawing a secret word while everyone else submits their
-          best guesses. Correct guesses earn points, and the fun comes from
-          seeing every sketch interpreted in a different way.
+          A word becomes a drawing, and a drawing sparks a guess. That is the
+          concept behind Scribble: seeing how differently we picture the same
+          thing, and sharing a laugh along the way.
         </p>
-        <h2>Made for playing together</h2>
+        <h2>Better together</h2>
         <p>
-          Scribble keeps the focus on quick rounds, creative drawings, and
-          memorable moments with friends. No artistic skills are needed—just a
-          little imagination and a willingness to guess.
+          You do not need to be an artist to enjoy a little creativity with
+          friends. Scribble is about the joy of playing together, not perfect
+          pictures. Bring your imagination and a sense of humor.
         </p>
       </div>
     </section>
